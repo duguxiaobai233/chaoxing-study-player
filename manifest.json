@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "超星视频与 PDF 连播",
+  "version": "1.1.0",
+  "description": "在超星学习页静音播放视频、逐页展示 PDF，并按目录顺序切换章节。",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.chaoxing.com/mycourse/studentstudy*",
+        "https://*.chaoxing.com/mooc2-ans/mycourse/stu*",
+        "https://*.chaoxing.com/screen/v2/*"
+      ],
+      "js": ["chaoxing-study.user.js"],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ]
+}
